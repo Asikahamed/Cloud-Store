@@ -15,7 +15,7 @@ jobs:
       packages: write
       id-token: write
     with:
-      image-name: Cloud-Store
+      image-name: cloud-store
       java-version: '17'
     secrets:
       dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
