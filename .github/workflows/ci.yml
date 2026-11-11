@@ -1,0 +1,17 @@
+name: Java App Pipeline
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  call-java-ci:
+    uses: Asikahamed/common-ci/.github/workflows/common-java-ci.yml@main
+    with:
+      image-name: Cloud-Store
+      java-version: '17'
+    secrets:
+      dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
+      dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
