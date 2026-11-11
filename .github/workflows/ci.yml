@@ -9,6 +9,11 @@ on:
 jobs:
   call-java-ci:
     uses: Asikahamed/common-ci/.github/workflows/common-java-ci.yml@main
+    permissions:
+      contents: read
+      security-events: write
+      packages: write
+      id-token: write
     with:
       image-name: Cloud-Store
       java-version: '17'
